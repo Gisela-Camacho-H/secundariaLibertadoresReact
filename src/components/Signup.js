@@ -5,7 +5,8 @@ export default function Signin() {
 		<>
 		<br/>
 		<div className="titlePage">
-            <h1>Sign Up</h1>
+		<br/>
+            <h1>Registro</h1>
         </div>
 		<br/>
 		<div className="formCreate1">

@@ -78,3 +78,249 @@ form{
   width: 100%;
   font-family: 'Solway', 'Arial', sans-serif;
 }
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+	background-color: #fff;
+	color: #222;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-family: 'Poppinsm', 'Arial';/*'Open Sans', 'Arial', sans-serif;*/
+}
+
+/*Header */
+.header{
+  padding: 0;
+  width: 100%;
+  height: 40vh;
+  position: relative;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 40px;
+  margin-left: 0px;
+}
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all .3s ease-in-out;
+  /*height: 10%;*/
+  z-index: 1;
+}
+.navbar.active {
+  background-color: #29638A;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.navbar .container {
+  align-items: center;
+  display: flex;
+  padding: 10px 0;
+  justify-content: space-between;
+  transition: all .3s ease-in-out;
+}
+
+.navbar a {
+  color: #ECE5E4;
+  font-weight: 600;
+  padding: 7px 25px;
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+  text-align: center;
+  font-size: 20px;
+}
+
+.navbar.active .container {
+  padding: 10px 0;
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.navbar.active li a:hover {
+  background-color: #0E333C;
+  color: #fff;
+}
+
+
+.navbar li a:hover {
+  font-weight: 600;
+  background-color: #fff;
+  color: #222;
+}
+
+.navbar.active a {
+  color: #ECE5E4;
+  font-weight: 600;
+  padding: 7px 10px;
+}
+
+.content .header_background{
+  position: relative;
+}
+.content .header_background img {
+  display: block;
+  min-width: 300px;
+  max-width: 100%;
+  max-height: 120%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  
+}
+
+.content .header_background .slogan{
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  background-color: rgba(31,39,43,0.5);
+  /*background-color: rgba(255, 223, 89, 0.3);*/
+  /*background: rgba(255, 223, 89, 0.3); */
+  width: 100%;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  display: block;
+  margin-left: auto;
+  margin-left: auto;
+}
+
+.content .header_background .slogan h1{
+  font-weight: 900;
+  font-size: 30px;
+  flex-wrap: wrap;
+  /*line-height: 2;*/
+  color: #fff; /* #0E333C;*/
+  text-align: center;
+  /*color: #0E333C;*/
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.content .header_background .slogan p{
+  font-weight: 800;
+  flex-wrap: wrap;
+  line-height: 1;
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/*end header*/
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+
+.container .content h1, .content h2 {
+  color: #0E333C;
+  padding: 2rem 0;
+} 
+
+.container .content p {
+  color: #555;
+  line-height: 30px;
+  letter-spacing: 1.5px;
+  text-align:justify;
+  margin: auto;
+}
+
+.container .content img{
+  margin: auto;
+  display: block;
+  width: 40%;
+}
+
+
+
+/*
+Footer 
+*/
+footer{
+  margin-top: 4em;
+  background-color: #0E333C;
+}
+footer p{
+  color: #fff; 
+  margin-left: 30px;
+  font-size: 1.5vw;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+}
+#footer{
+  display: flex;
+  justify-content: space-between;
+}
+#map{
+  margin-bottom: 20px;
+}
+
+/*
+login
+*/
+form{
+  font-family: 'Solway', 'Arial', sans-serif;
+  margin-bottom: 350px;
+  margin-top: 50px;
+}
+.formCreate1{
+  background-color: rgba(251, 253, 255, 0.4);
+  width: 30%;
+  margin: auto;
+  height: 250px;
+}
+.input{
+  margin: 10px 0px 30px auto;
+  width: 90%;
+  padding: 10px;
+  background-color: #29638A;
+  color: white;
+}
+.label{
+  font-size: 20px;
+  text-align: center;
+}
+.login{
+  font-size: 20px;
+  padding: 5px;
+  background-color: #FFDF59;
+  border-radius: 10px;
+  border: 3px  #29638A solid;
+  margin: 5px 0px 5px 40px;
+  width: 70%;
+  font-family: 'Solway', 'Arial', sans-serif;
+}
+.crearCuenta{
+  text-decoration: none;
+  color: #29638A;
+  margin-left: 120px;
+  width: 100%;
+  font-family: 'Solway', 'Arial', sans-serif;
+}
+
+#errorNombre, #errorEmail, #errorTelefono, #errorConsulta, #errorContrasena, #errorApellidos, #errorConfirmar {
+  color: red;
+  font-family: 'Solway', 'Arial', sans-serif;
+  font-size: 10px;
+}
+
+#image{
+  width: 60%;
+  margin-left: 20%;
+}

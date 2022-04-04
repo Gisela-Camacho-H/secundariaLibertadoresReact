@@ -5,7 +5,7 @@
 import React from 'react';
 
 import { Outlet, Link} from 'react-router-dom'
-
+import headerImage from './header_background0.jpg';
 
 export default function Layout() {
 
@@ -20,12 +20,9 @@ export default function Layout() {
 			<li><Link to="/" className="active">Inicio</Link></li>
 			<li><Link to="/nosotros">Nosotros</Link></li>
 			<li><Link to="/admision">Admisión</Link></li>
-			<li><Link to="/plan">Plan de Estudio</Link></li>
 			<li><Link to="/calendario">Calendario Escolar</Link></li>
 			<li><Link to="/galeria">Galeria</Link></li>
 			<li><Link to="/contacto">Contacto</Link></li>
-			<li><Link to="/otros">Otros</Link></li>
-			<li><Link to="/productos">Productos</Link></li>
         </ul>
         <ul>
 			<li><Link to="/login">login</Link></li>
@@ -37,6 +34,7 @@ export default function Layout() {
     
 <div className="content">
     <div className="header_background">
+    <img src={headerImage}  alt="header_background"/>
 	<div className="slogan">
         <h1>Escuela Secundaria Libertadores de América</h1>
         <p>"Educando para la vida, con equidad y calidad"</p>

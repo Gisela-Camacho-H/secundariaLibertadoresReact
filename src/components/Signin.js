@@ -3,8 +3,8 @@ import React from 'react'
 export default function Signin() {
 	return (
 		<>
-        <br/><br/><br/><br/><br/><br/>
         <form action="/" method="POST">
+        <h1>Login</h1>
             <div className="formCreate1">
                 <div>
                     <label className="label" ><b>Correo</b></label><br/>
@@ -19,8 +19,6 @@ export default function Signin() {
                 <div>
                     <button className="login" type="submit">login</button>
                 </div>
-                <br/>
-                <a className="crearCuenta" href="register">Crear Cuenta</a>
                 <br/>
             </div>
         </form>
