@@ -1,5 +1,5 @@
 import React from 'react'
-import headerImage from './calendario.jpg';
+import headerImage from '../assets/images/calendario.jpg';
 
 export default function Nosotros() {
 	return (

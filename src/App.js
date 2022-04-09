@@ -9,6 +9,7 @@ import Calendario from './components/Calendario';
 import Contacto from './components/Contacto';
 import Galeria from './components/Galeria';
 import Layout from './components/Layout';
+import Dashboard from './components/Dashboard';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 function App() {
@@ -29,6 +30,8 @@ function App() {
             <Route path="/contacto" element={<Contacto />} />
 
             <Route path="/admision" element={<Admision />} />
+
+            <Route path="/dashboard" element={<Dashboard />} />
 
             <Route path="/signup" element={<Signup />} />
 

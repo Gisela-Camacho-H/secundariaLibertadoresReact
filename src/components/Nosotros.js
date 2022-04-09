@@ -1,5 +1,5 @@
 import React from 'react'
-import headerImage from './nosotros.jpg';
+import headerImage from '../assets/images/nosotros.jpg';
 
 export default function Nosotros() {
 	return (

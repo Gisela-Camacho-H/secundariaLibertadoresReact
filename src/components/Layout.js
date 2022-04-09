@@ -5,7 +5,7 @@
 import React from 'react';
 
 import { Outlet, Link} from 'react-router-dom'
-import headerImage from './header_background0.jpg';
+import headerImage from '../assets/images/header_background0.jpg';
 
 export default function Layout() {
 
@@ -22,7 +22,7 @@ export default function Layout() {
 			<li><Link to="/admision">Admisión</Link></li>
 			<li><Link to="/calendario">Calendario Escolar</Link></li>
 			<li><Link to="/galeria">Galeria</Link></li>
-			<li><Link to="/contacto">Contacto</Link></li>
+            <li><Link to="/dashboard">Dashboard</Link></li>
         </ul>
         <ul>
 			<li><Link to="/login">login</Link></li>

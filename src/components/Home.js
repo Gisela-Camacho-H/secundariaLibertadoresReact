@@ -3,6 +3,7 @@ import React from 'react'
 export default function Home() {
 	return (
 		<>
+		<br/><br/>
     <section className="container">
       <div className="content">
         <h2>UN SUEÑO... UN PROYECTO... UNA ESCUELA.</h2>
