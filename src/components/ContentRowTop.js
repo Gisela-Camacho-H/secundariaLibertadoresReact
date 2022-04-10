@@ -1,8 +1,9 @@
 import React from 'react';
 import imagenFondo from '../assets/images/calendario.jpg';
-import GenresInDb from './GenresInDb';
-import ContentRowMovies from './ContentRowMovies';
-function ContentRowTop(){
+import AnunciosInDb from './AnunciosInDb';
+import ContentRowDBContent from './ContentRowDBContent';
+
+function ContentRowTop({anuncios, maestros, estudiantes}){
     return(
         <React.Fragment>
 				{/*<!-- Content Row Top -->*/}
@@ -12,7 +13,7 @@ function ContentRowTop(){
 					</div>
 				
 					{/*<!-- Content Row Movies-->*/}
-					<ContentRowMovies />
+					<ContentRowDBContent anuncios={anuncios} maestros={maestros} estudiantes={estudiantes}/>
 					{/*<!-- End movies in Data Base -->*/}
 					
 	
@@ -31,14 +32,14 @@ function ContentRowTop(){
 									<p>Damos a usted la más cordial bienvenida al ciclo escolar 2021-2021 y asumimos con entusiasmo el compromiso contraído con cada uno de ustedes, padres y tutores de nuestros alumnos. Esto nos da pauta y la seguridad de coordinar con ustedes, todas las actividades tanto académicas, culturales y deportivas, así como las disciplinas e iniciativas que juntos habremos de inculcar en nuestros jóvenes, para su crecimiento personal y académico.
 									La educación de nuestros alumnos es un Teto serio y requiere no solo de la preparación de los docentes y de la dirección correcta en nuestras actividades, sino que amerita la vinculación constante, firme y decidida con los padres de familia; juntos debemos asumir esta gran tarea, de hallar soluciones a las dificultades que se presenten en el transcurrir de este ciclo escolar y, así, airosos alcanzar en conjunto, el éxito que repercutirá en la adquisición de 
 									conocimientos y de la personalidad de nuestros alumnos. La mayor satisfacción que podremos tener como escuela, es la de elevar el espíritu de alumnos tenaces, sanos en sus ideas para llegar a ser adultos responsables y ciudadanos que contribuyan al beneficio de esta sociedad.</p>
-									<a className="btn btn-danger" target="_blank" rel="nofollow" href="/">View movie detail</a>
+									
 								</div>
 							</div>
 						</div>
 						{/*<!-- End content row last movie in Data Base -->*/}
 
 						{/*<!-- Genres in DB -->*/}
-						<GenresInDb />
+						<AnunciosInDb anuncios={anuncios} />
 
 						{/*<!--End Genres In Db-->*/}		
 					</div>
