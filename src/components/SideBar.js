@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 function SideBar(){
     return(
@@ -12,9 +13,11 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Dashboard -->*/}
                 <li className="nav-item active">
-                    <a className="nav-link" href="/">
+                    <Link className="nav-link" to="/dashboard">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Secundaria Libertadores</span></a>
+                        <span>Secundaria Libertadores</span>
+                    </Link>
+                    
                 </li>
 
                 {/*<!-- Divider -->*/}
@@ -25,24 +28,26 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">
-                    <a className="nav-link collapsed" href="/">
+                    <Link className="nav-link collapsed" to="/anuncios">
                         <i className="fas fa-fw fa-folder"></i>
-                        <span>Estudiantes</span>
-                    </a>
+                        <span>Anuncios</span>
+                    </Link>
                 </li>
 
                 {/*<!-- Nav Item - Charts -->*/}
                 <li className="nav-item">
-                    <a className="nav-link" href="/">
-                        <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Maestros</span></a>
+                <Link className="nav-link collapsed" to="/maestros">
+                        <i className="fas fa-fw fa-folder"></i>
+                        <span>Maestros</span>
+                    </Link>
                 </li>
 
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item">
-                    <a className="nav-link" href="/">
-                        <i className="fas fa-fw fa-table"></i>
-                        <span>Anuncios</span></a>
+                <Link className="nav-link collapsed" to="/estudiantes">
+                        <i className="fas fa-fw fa-folder"></i>
+                        <span>Estudiantes</span>
+                    </Link>
                 </li>
 
                 {/*<!-- Divider -->*/}

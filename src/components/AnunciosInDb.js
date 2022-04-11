@@ -13,7 +13,7 @@ function AnunciosInDb({anuncios}){
                         </div>
                         <div className="card-body" id="card-body">
                             <div className="row">
-                                {
+                                {   
                                     anuncios.map((anuncio,index)=>{
                                         return  <AnuncioContent  {...anuncio}  key={index} />
                                     })

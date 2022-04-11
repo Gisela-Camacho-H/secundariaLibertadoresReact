@@ -1,7 +1,6 @@
 import React from 'react';
 import ContentRowTop from './ContentRowTop';
-import Movie from './Movie';
-import Footer from './Footer';
+import MaestrosTable from './MaestrosTable';
 
 function ContentWrapper({anuncios, maestros, estudiantes}){
     return (
@@ -11,8 +10,7 @@ function ContentWrapper({anuncios, maestros, estudiantes}){
                 {/*<!-- Main Content -->*/}
                 <div id="content">
                     <ContentRowTop anuncios={anuncios} maestros={maestros} estudiantes={estudiantes}/>
-                    <Movie />
-                    <Footer />
+                    <MaestrosTable maestros={maestros}/>
                 </div>
             </div>    
         </React.Fragment>

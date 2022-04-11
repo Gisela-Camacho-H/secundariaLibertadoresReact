@@ -40,7 +40,6 @@ function ContentRowTop({anuncios, maestros, estudiantes}){
 
 						{/*<!-- Genres in DB -->*/}
 						<AnunciosInDb anuncios={anuncios} />
-
 						{/*<!--End Genres In Db-->*/}		
 					</div>
 				</div>

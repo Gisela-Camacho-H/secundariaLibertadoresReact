@@ -1,4 +1,5 @@
-
+import React, { Component} from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Signup from './components/Signup';
 import Signin from './components/Signin';
@@ -10,38 +11,82 @@ import Contacto from './components/Contacto';
 import Galeria from './components/Galeria';
 import Layout from './components/Layout';
 import Dashboard from './components/Dashboard';
+import Maestros from './components/Maestros';
+import Estudiantes from './components/Estudiantes';
+import Anuncios from './components/Anuncios';
+import AnuncioData from './components/AnuncioData';
+import Footer from './components/Footer';
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      contentAnuncios: [],
+      contentMaestros: [],
+      contentEstudiantes: [],
+    };
+  }
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-function App() {
-  return (
-    <>
-      <BrowserRouter>
-        <Routes>
-            <Route path="/" element={<Layout />}>
+  componentDidMount() {
+    fetch("api/anuncios")
+      .then((response) => response.json())
+      .then((albums) => this.setState({ contentAnuncios: albums.data }))
+      .catch((err) => console.log(err));
 
-            <Route path="/" element={<Home />} />
+    fetch("api/maestros")
+      .then((response) => response.json())
+      .then((users) => this.setState({ contentMaestros: users.data }))
+      .catch((err) => console.log(err));
+    
+    fetch("api/estudiantes")
+    .then((response) => response.json())
+    .then((users) => this.setState({ contentEstudiantes: users.data }))
+    .catch((err) => console.log(err));  
+  }
+    
+  render(){
+    let anuncios = this.state.contentAnuncios;
+    let maestros = this.state.contentMaestros;
+    let estudiantes = this.state.contentEstudiantes;
+    
+    return (
+      <>
+        <BrowserRouter>
+          <Routes>
+              <Route path="/" element={<Layout />}>
 
-            <Route path="/nosotros" element={<Nosotros />} />
+              <Route path="/" element={<Home />} />
 
-            <Route path="/calendario" element={<Calendario />} />
+              <Route path="/nosotros" element={<Nosotros />} />
 
-            <Route path="/galeria" element={<Galeria />} />
+              <Route path="/calendario" element={<Calendario />} />
 
-            <Route path="/contacto" element={<Contacto />} />
+              <Route path="/galeria" element={<Galeria />} />
 
-            <Route path="/admision" element={<Admision />} />
+              <Route path="/contacto" element={<Contacto />} />
 
-            <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/admision" element={<Admision />} />
 
-            <Route path="/signup" element={<Signup />} />
+              <Route path="/dashboard" element={<Dashboard anuncios={anuncios} maestros={maestros} estudiantes={estudiantes}/>} />
 
-            <Route path="/login" element={<Signin />} />
+              <Route path="/signup" element={<Signup />} />
 
-            </Route>
-        </Routes>
-      </BrowserRouter>
-    </>
-  );
+              <Route path="/login" element={<Signin />} />
+
+              <Route path="/anuncio/:id" element={<AnuncioData anuncios={anuncios}/>}/>
+
+              <Route path="/anuncios" element={<Anuncios  anuncios={anuncios} />}/>
+
+              <Route path="/maestros" element={<Maestros  maestros={maestros} />}/>
+              
+              <Route path="/estudiantes" element={<Estudiantes estudiantes={estudiantes}/>}/>
+
+              </Route>
+          </Routes>
+        </BrowserRouter>
+        <Footer />
+      </>
+    );
+  }
 }
 
 export default App;
