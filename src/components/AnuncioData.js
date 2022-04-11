@@ -5,7 +5,7 @@ import {useParams} from 'react-router-dom';
 function AnuncioData(props){
     let {anuncios} = props; 
     let {id} = useParams();
-    let anuncio = anuncios[id]
+    let anuncio = anuncios[id-1]
     return (
         <React.Fragment>
             <div id="wrapper">

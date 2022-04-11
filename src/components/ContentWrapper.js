@@ -10,7 +10,6 @@ function ContentWrapper({anuncios, maestros, estudiantes}){
                 {/*<!-- Main Content -->*/}
                 <div id="content">
                     <ContentRowTop anuncios={anuncios} maestros={maestros} estudiantes={estudiantes}/>
-                    <MaestrosTable maestros={maestros}/>
                 </div>
             </div>    
         </React.Fragment>
