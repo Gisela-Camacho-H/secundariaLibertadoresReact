@@ -8,10 +8,10 @@ function AnunciosInDb({anuncios}){
             <div id="wrapper">
                 <SideBar />
                 {/*<!-- Table Maestros in DB -->*/}
-                <div className="col-lg-6 mb-4">
-                    <div className="card shadow  col-md sm">
+                <div className="col-lg-6 mb-4" >
+                    <div className="card shadow  col-md-10 sm-10 shadow">
                         <div className="card-header py-3">
-                            <h6 className="m-0 font-weight-bold text-gray-800">Anuncios en base de datos</h6>
+                            <h4 className="m-0 font-weight-bold text-gray-800">Anuncios en base de datos</h4>
                         </div>
                         <div className="card-body" id="card-body">
                             <div className="row">

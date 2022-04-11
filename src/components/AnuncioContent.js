@@ -5,7 +5,7 @@ function AnuncioContent(props){
     return(
         <React.Fragment>
             <Link
-                className="text-decoration-none col-md-8 sm-3"
+                className="text-decoration-none col-md-10 sm-8"
                 to={`/anuncio/${props.id}`}
             >
             <div className="col-lg-6 mb-4">

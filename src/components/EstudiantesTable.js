@@ -8,7 +8,7 @@ const EstudiantesTable = ({estudiantes}) => {
             {/*<!-- Table Maestros in DB -->*/}
             <div className="card shadow mb-4">
                 <div className="card-header py-3">
-                    <h1 className="m-0 font-weight-bold text-gray-800">Estudiantes en Base de Datos</h1>
+                    <h4 className="m-0 font-weight-bold text-gray-800">Estudiantes en Base de Datos</h4>
                 </div>
                     <div className="card-body">
                         <div className="table-responsive">
